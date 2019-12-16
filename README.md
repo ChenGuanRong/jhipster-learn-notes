@@ -5,5 +5,5 @@ JHipster是一個免费的开源应用程序生成器，用于使用Angular或Re
                                                                                  ————来自维基百科
                                                                                  
                                                                                  
-快速了解JHipster传送门: https://www.youtube.com/watch?v=baVOGuFIe9M 来自Matt Raible 的演讲
+快速了解JHipster传送门: https://www.youtube.com/watch?v=baVOGuFIe9M 来自Matt Raible 的介绍与演示
 
