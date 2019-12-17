@@ -5,3 +5,12 @@
 
 Jhipstter Demo 地址(指南) : https://github.com/mraible/jhipster6-demo
 
+创建实体 
+
+yo jhipster:entity entityName
+
+
+安装yo
+npm install -g yo
+
+
