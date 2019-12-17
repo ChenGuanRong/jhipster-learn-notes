@@ -9,6 +9,7 @@ Jhipstter Demo 地址(指南) : https://github.com/mraible/jhipster6-demo
 
 yo jhipster:entity entityName
 
+然后填写对应字段、类型、等等属性,根据提示选择
 
 安装yo
 npm install -g yo
