@@ -15,3 +15,10 @@ yo jhipster:entity entityName
 npm install -g yo
 
 
+jdl 生成 entity 
+
+jhipster import-jdl *.jdl
+
+
+jdl 样例
+
