@@ -22,3 +22,107 @@ jhipster import-jdl *.jdl
 
 jdl 样例
 
+
+
+/**
+ * The StockType entity.
+ * @author A true hipster
+ */
+entity StockType {
+   /** typeName DEFAULT = 订单转入库单 ,  INIT = 期初库存(初始化库存) */
+   typeName String,
+   typeCode String
+}
+
+/**
+ * The Supplier entity. 供应商
+ * @author A true hipster
+ */
+entity Supplier {
+   /** fieldName */
+   supplierName String,
+   supplierCode String
+}
+
+/**
+ * 员工
+ * The Staff entity.
+ * @author A true hipster
+ */
+  
+entity Staff {
+   /** fieldName */
+   staffName String,
+   staffCode String
+}
+
+/**
+ * The Stock entity.
+ * @author A true hipster
+ */
+entity Stock {
+   /** 入库单号 */
+   orderID String,
+   /** 时间 */
+   date Date,
+   /** 订货单id */
+   orderPid String,
+   /** 订单状态 */
+   status Integer
+
+}
+
+
+
+/**
+ * The StockProduct entity.
+ * @author A true hipster
+ */
+entity StockProduct {
+   /** 入库单主单号 */
+   orderID String,
+   /** 产品编码 */ 
+   productCode String,
+   /** 产品名称 */
+   productName String,
+   /** 产品库存数量 */
+   productStockNum Integer,
+      /** 产品库存期初数量 */
+   productStockStartNum Integer,
+   /** 产品库存期末数量 */ 
+   productStockEndNum Integer,
+   /** 产品单位 */ 
+   productUnit String,
+   /** 创建日期 */
+   createDate Date,
+   /** 创建时间戳 */
+   createInt Integer
+   
+}
+
+
+
+
+
+/**
+ * One to many relationship.
+ */
+relationship OneToMany {
+   Stock{stockProduct} to StockProduct
+}
+
+/**
+ * One to one relationship.
+ */
+relationship OneToOne {
+   Stock{StockType} to StockType,
+   Stock{Supplier} to Supplier,
+   Stock{operator} to Staff,
+   Stock{auditer} to Staff
+}
+
+paginate Stock with pagination
+
+dto * with mapstruct
+
+service Stock,StockProduct,Supplier,Staff,StockType with serviceClass
