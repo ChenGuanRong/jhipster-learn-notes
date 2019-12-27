@@ -1,0 +1,32 @@
+项目可以直接生成docker-compose 配置文件
+
+
+
+在与app项目目录同级别 创建docker-compose 目录 
+
+运行 jhipster docker-compose 
+
+选择与填写对应的参数生成后会有提示 根据提示操作。
+
+
+例子：
+
+
+生成完成后，在app目录中运行生成Dockerfile配置
+
+./mvnw verify jib:dockerBuild
+
+生成完成后
+
+回到docker-compose 目录  
+
+直接运行 docker-compose up -d 就可以跑起来
+
+
+最好docker ps 看下端口有没有冲突
+
+
+jhipster 的默认生成应用端口一般都是8080 等
+
+
+
