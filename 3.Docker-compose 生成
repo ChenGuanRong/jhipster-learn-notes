@@ -29,4 +29,4 @@
 jhipster 的默认生成应用端口一般都是8080 等
 
 
-
+MacOs用户可以安装个 Kitematic软件，方便统一查看docker容器运行情况。
